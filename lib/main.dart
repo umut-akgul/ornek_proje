@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ornek_proje/widgets/expansiontile_page.dart';
+import 'package:ornek_proje/widgets/filter_menu_with_chips.dart';
+import 'package:ornek_proje/widgets/image_and_tabbar_page.dart';
 import 'package:ornek_proje/widgets/liste_ornek.dart';
+import 'package:ornek_proje/widgets/nested_tabbar_ornek.dart';
 import 'package:ornek_proje/widgets/pageview_page.dart';
+import 'package:ornek_proje/widgets/settings_expansion_menu.dart';
+import 'package:ornek_proje/widgets/simple_image_slider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyProject(),
+      home: FilterMenuWithChips(),
     );
   }
 }
@@ -38,8 +43,10 @@ class _MyProjectState extends State<MyProject> {
     super.initState();
     sayfalar = [
       ListeOrnek(listKey: keyList),
-      ExpansiontilePage(expansionKey: keyExpansion),
-      PageviewPage(),
+      // ExpansiontilePage(expansionKey: keyExpansion),
+      SettingsExpansionMenu(),
+      // PageviewPage(),
+      SimpleImageSlider(),
     ];
   }
 
